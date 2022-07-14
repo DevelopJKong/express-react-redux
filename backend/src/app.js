@@ -5,8 +5,10 @@ const app = express();
 const PORT = 7000;
 
 
+app.use(express.json({
+    limit: '50mb'
+}));
 app.use("/api",rootRouter);
-
 
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);

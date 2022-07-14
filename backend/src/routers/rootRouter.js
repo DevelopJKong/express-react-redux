@@ -1,11 +1,9 @@
 import express from "express";
-import { getMail, getUser } from "../controllers/apiController.js";
+import { postMail, getUser } from "../controllers/apiController.js";
 
 const rootRouter = express.Router();
 
 rootRouter.post("/user",getUser);
-rootRouter.get("/mail",getMail);
-
-
+rootRouter.post("/mail",postMail);
 
 export default rootRouter
